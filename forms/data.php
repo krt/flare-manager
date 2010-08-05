@@ -9,11 +9,15 @@
  **/
 global $addon,$data;
 function listHosts($hosts){
-    $str='<select name="addr">';
-    foreach($hosts as $host){
-        $str.= '<option value="'.$host["addr"].'">'.$host["addr"].'</option>';
+    if(!empty($hosts)){
+        $str='<select name="addr">';
+        foreach($hosts as $host){
+            $str.= '<option value="'.$host["addr"].'">'.$host["addr"].'</option>';
+        }
+        $str.="</select>";
+    }else{
+        $str = '<div class="error">Error! No nodes detected!</div>';
     }
-    $str.="</select>";
     return $str;
 }
 ?>

@@ -31,3 +31,8 @@ div,p,pre {
 .state_active {
     color:green;
 }
+div.error{
+    margin-top:15px;
+    margin-bottom:15px;
+    color:#CC0000;
+}
